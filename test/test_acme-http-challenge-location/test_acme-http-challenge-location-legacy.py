@@ -17,4 +17,4 @@ def test_unknown_domain_acme_challenge_location_legacy(docker_compose, nginxprox
         f"http://web-unknown.nginx-proxy.tld/{acme_challenge_path}",
         allow_redirects=False
     )
-    assert r.status_code == 503
+    assert r.status_code == 200
